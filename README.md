@@ -6,7 +6,7 @@
 ## 介紹
   
 居家照顧的Robot清單網站，可以瀏覽所有Robots的詳細介紹與能力數值圖表、將喜歡的清單加入My Selections頁面，或是移除，甚至可以根據關鍵字或服務性別搜尋特定的Robots。
-點擊連結瀏覽網站:
+點擊連結瀏覽網站:https://sihping.github.io/Home-Nursing-Robot/
 
 ### 功能
 
