@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+  <title>Home Nursing Robots</title>
+  <link
+    href="style.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous"
+  >
+  <link
+    rel="stylesheet"
+    href="https://kit.fontawesome.com/2247b3ba08.css"
+    crossorigin="anonymous"
+  >
+</head>
+
+<body>
+  <!--Carousel-->
+  <div
+    id="carouselExampleAutoplaying"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://img.onl/QKgNW"
+          class="d-block w-100"
+          alt="cover1"
+        >
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://img.onl/KFSyis"
+          class="d-block w-100"
+          alt="cover2"
+          layout="fill"
+        >
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://img.onl/AsJ1u1"
+          class="d-block w-100"
+          alt="cover3"
+        >
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev"
+    >
+      <span
+        class="carousel-control-prev-icon"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next"
+    >
+      <span
+        class="carousel-control-next-icon"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!--navbar-->
+  <nav class="navbar nav-selection">
+    <div class="container">
+      <a
+        class="navbar-brand fs-2 col-12 col-sm-4"
+        href="favorite.html"
+      >My Selections</a>
+
+      <!--search bar-->
+      <form
+        class="d-flex col-9"
+        role="search"
+        id="search-form"
+      >
+        <input
+          id="input"
+          class="form-control me-2 col-8"
+          type="search"
+          placeholder="Search Robot's Name..."
+          aria-label="Search"
+        >
+        <button
+          class="btn btn-dark"
+          id="search"
+          type="submit"
+        >GO</button>
+      </form>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a
+              class="nav-link active fs-4"
+              aria-current="page"
+              href="index.html"
+            ><i class="fa-solid fa-house"> </i>Robot Lists</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--container-->
+  <div
+    class="container-fluid"
+    id="container-selection"
+  >
+
+    <div class="container px-3 look-for ">
+      <!--select button-->
+      <div
+        class="btn-group col-sm-6"
+        id="select-btn"
+        role="group"
+        aria-label="Basic outlined example"
+      >
+        <button
+          type="button"
+          class="btn btn-warning"
+          data-gender="male"
+        >For
+          Male</button>
+        <button
+          type="button"
+          class="btn btn-light"
+          data-gender="female"
+        >For Female</button>
+        <button
+          type="button"
+          class="btn btn-dark"
+          data-gender="all"
+        >All Robots</button>
+      </div>
+      
+    </div>
+    <!--data-panel-->
+    <div
+      id="data-panel"
+      class="d-flex flex-wrap justify-content-center"
+    >
+      <!--cardMaker function-->
+    </div>
+  </div>
+
+  <!--Pagination-->
+  <nav
+    class="m-0"
+    style="background-color:#ffbb00;"
+    aria-label="Page navigation example"
+  >
+    <ul
+      class="pagination justify-content-center"
+      id="pagination"
+    >
+      <!--pageNum()製作-->
+    </ul>
+  </nav>
+
+  <!--modal-->
+  <div
+    class="modal fade modal-lg"
+    id="card-modal"
+    tabindex="-1"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div
+          class="modal-header"
+          style="background-color:#b7b7ef;"
+        >
+          <h5 class="modal-title">About Me</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div
+          class="modal-body"
+          id="modal-body"
+        >
+          <div id="modal-avatar">
+            <img
+              src=""
+              alt="avtar"
+              id="modal-avatar-img"
+            >
+          </div>
+          <div>
+            <p class="info"></p>
+          </div>
+        </div>
+
+        <div id="chart">
+          <canvas
+            id="myChart"
+            width="300"
+            height="300"
+          ></canvas>
+        </div>
+
+        <div
+          class="modal-footer"
+          style="background-color:#b7b7ef;"
+        >
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--replit-->
+  <script
+    src="https://replit.com/public/js/replit-badge.js"
+    theme="blue"
+    defer
+  ></script>
+
+  <!--axios-->
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+
+  <!--bootstrap & popper-->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script>
+
+  <!--fontawesome-->
+  <script
+    src="https://kit.fontawesome.com/2247b3ba08.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <!--chartJS-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!--自己JS-->
+  <script src="favorite.js"></script>
+
+</body>
+
+</html>
